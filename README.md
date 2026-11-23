@@ -8,9 +8,10 @@ Animated one-page website for **Fahman Quesillo**, a Venezuelan quesillo stand i
 
 ## What's inside
 
-A single self-contained `index.html` (Arabic, RTL) with:
+`index.html` (Arabic, RTL) plus optimized WebP photos in `images/`:
 
-- Animated hero: a floating quesillo with dripping caramel
+- Animated hero: floating quesillo photo with sparkles
+- Photo step cards and a full-width street-cart photo that zooms on scroll
 - Scrolling ribbon with days, hours and location
 - "What is quesillo?" cards with small animations
 - Interactive slicing game
