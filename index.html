@@ -55,7 +55,12 @@ nav .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between
 .cta{display:flex;flex-wrap:wrap;gap:16px}
 .stage{flex:0 1 560px;display:flex;justify-content:center}
 .hero-photo{position:relative;width:min(580px,100%)}
-.hero-photo img{display:block;width:100%;height:auto;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 52%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 52%,#000 60%,transparent 100%);animation:bob 4.5s ease-in-out infinite}
+.hero-photo{padding:40px 0 30px}
+.hero-photo img{position:relative;z-index:1;display:block;width:100%;height:auto;filter:drop-shadow(0 18px 22px rgba(90,42,10,.28));animation:bob 4.5s ease-in-out infinite}
+.hero-shadow{position:absolute;left:12%;right:12%;bottom:18px;height:34px;border-radius:50%;background:radial-gradient(closest-side,rgba(110,55,15,.35),transparent);animation:shadow 4.5s ease-in-out infinite}
+@keyframes shadow{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(.85);opacity:.6}}
+.hero-glow{position:absolute;inset:6% 4%;border-radius:50%;background:radial-gradient(closest-side,rgba(246,196,83,.45),transparent 75%);animation:glow 4.5s ease-in-out infinite}
+@keyframes glow{50%{transform:scale(1.06);opacity:.7}}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-16px) rotate(1.5deg)}}
 .hero-photo .spark{z-index:2}
 /* entrance + reveal */
@@ -166,7 +171,9 @@ footer .lat{font-size:24px;color:var(--accent)}
       <span class="spark" aria-hidden="true" style="top:30%;left:2%;animation-delay:.9s"></span>
       <span class="spark" aria-hidden="true" style="bottom:12%;right:2%;animation-delay:1.6s"></span>
       <span class="spark" aria-hidden="true" style="top:2%;left:35%;width:10px;height:10px;animation-delay:2.2s"></span>
-      <img src="images/quesillo-hero.webp" width="1200" height="800" alt="كيسيو كامل بالكراميل اللامع على طبق أبيض">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <img src="images/quesillo-hero-cut.webp" width="1100" height="625" alt="كيسيو كامل بالكراميل اللامع والكراميل سايح حواليه">
+      <div class="hero-shadow" aria-hidden="true"></div>
     </div>
   </div>
 </header>
